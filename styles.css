@@ -1,0 +1,31 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.bg-orange {
+    background-color: orange !important;
+}
+
+.bg-green {
+    background-color: green !important;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list-group-item.incomplete {
+    background-color: orange;
+}
+
+.list-group-item.almost-complete {
+    background-color: white;
+}
+
+.list-group-item.complete {
+    background-color: green;
+    color: white;
+}
