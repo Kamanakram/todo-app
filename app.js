@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware pour servir des fichiers statiques
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 // Configuration de la session
 app.use(session({
@@ -105,13 +105,16 @@ app.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRe
 });
 
 // Routes pour les pages
+// Routes pour les pages
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/track', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'track.html'));
+    res.sendFile(path.join(__dirname, 'track.html'));
 });
+
+
 
 // Démarrer le serveur
 app.listen(PORT, () => {
