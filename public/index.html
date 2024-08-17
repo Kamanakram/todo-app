@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma To-Do List</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Ma To-Do List</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="taskInput" class="form-control" placeholder="Ajouter une tâche...">
+            <div class="input-group-append">
+                <button id="addTaskBtn" class="btn btn-primary">Ajouter</button>
+            </div>
+        </div>
+        <ul id="taskList" class="list-group mb-4"></ul>
+        <button id="trackTasksBtn" class="btn btn-info">Suivre les tâches</button>
+
+        <!-- Liens d'authentification -->
+        <div class="mt-4">
+            <a href="/auth/google" class="btn btn-danger">Se connecter avec Google</a>
+            <a href="/auth/facebook" class="btn btn-primary">Se connecter avec Facebook</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
